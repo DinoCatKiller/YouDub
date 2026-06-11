@@ -1,0 +1,44 @@
+{
+  "name": "@repo/api",
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "start": "bun src/index.ts",
+    "db:pull": "drizzle-kit pull",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "typecheck": "tsgo --noEmit"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.8.0",
+    "@repo/cli": "workspace:*",
+    "@repo/config": "workspace:*",
+    "@repo/device": "workspace:*",
+    "@repo/shared": "workspace:*",
+    "@repo/voxlab": "workspace:*",
+    "@socket.io/bun-engine": "^0.1.1",
+    "@types/cors": "^2.8.19",
+    "agnostic-query": "1.10.5",
+    "cors": "^2.8.6",
+    "db0": "^0.3.4",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
+    "drizzle-zod": "^0.8.3",
+    "find-up": "^8.0.0",
+    "hono": "^4.12.23",
+    "onnxruntime-node": "^1.26.0",
+    "onnxruntime-node-gpu": "1.14.0",
+    "openai": "^6.42.0",
+    "siokit": "^0.1.4",
+    "socket.io": "^4.8.3",
+    "socket.io-parser": "^4.2.6",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "better-sqlite3": "^12.10.0",
+    "drizzle-kit": "^0.31.10"
+  }
+}

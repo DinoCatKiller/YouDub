@@ -1,0 +1,15 @@
+{
+  "name": "socket-collection",
+  "scripts": {
+    "typecheck": "tsgo --noEmit"
+  },
+  "dependencies": {
+    "@standard-schema/spec": "^1.1.0",
+    "socket.io-client": "^4.8.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tanstack/solid-db": "^0.2.21",
+    "@typescript/native-preview": "latest"
+  }
+}

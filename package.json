@@ -1,0 +1,24 @@
+{
+  "name": "youdub-webui-fullstack",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev:api": "HSA_OVERRIDE_GFX_VERSION=11.0.0 uv run uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000",
+    "dev:web": "npm --prefix apps/web run dev",
+    "test:backend": "pytest backend/tests",
+    "lint:web": "npm --prefix apps/web run lint",
+    "build:web": "npm --prefix apps/web run build"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "2.4.16"
+  },
+  "dependencies": {
+    "@ffprobe-installer/ffprobe": "^2.1.2",
+    "agnostic-query": "^1.10.5",
+    "onnxruntime-node-gpu": "1.14.0"
+  }
+}

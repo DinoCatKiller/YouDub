@@ -1,0 +1,15 @@
+[
+  {
+    "engine": "typescript",
+    "device": "webgpu",
+    "text_key": "short",
+    "text_len": 19,
+    "load_time_s": 21.451,
+    "generate_time_s": 64.473,
+    "total_time_s": 85.925,
+    "output_samples": 322560,
+    "output_duration_s": 6.72,
+    "auto_patches": 42,
+    "rtf": 9.594
+  }
+]

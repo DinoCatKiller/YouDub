@@ -1,0 +1,39 @@
+{
+  "$schema": "./config.schema.json",
+  "command": "createTask",
+  "createTask": {
+    "sourceFile": "I:/mp4/12.mp4",
+    "sourceLang": "zh",
+    "targetLang": "vi"
+  },
+
+
+  "engines": {
+    "separate": {
+      "runtime": "pytorch",
+      "device": "cuda"
+    },
+    "asr": {
+      "runtime": "faster-whisper",
+      "device": "cuda"
+    },
+    "diarization": {
+      "runtime": "pyannote",
+      "device": "cuda"
+    },
+    "tts": {
+      "runtime": "cloud",
+      "device": "cloud"
+    }
+
+  },
+  "stages": {
+    "translate": {
+      "targetLang": "vi"
+    },
+    "merge_video": {
+      "fontSize": 19,
+      "marginV":10
+    }
+  }
+}

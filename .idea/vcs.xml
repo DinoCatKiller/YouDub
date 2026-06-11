@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/submodule/CosyVoice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/submodule/CosyVoice/third_party/Matcha-TTS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/submodule/VoxCPM" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/submodule/demucs" vcs="Git" />
+  </component>
+</project>

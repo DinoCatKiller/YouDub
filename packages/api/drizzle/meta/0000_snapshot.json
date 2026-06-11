@@ -1,0 +1,228 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "6",
+  "dialect": "sqlite",
+  "tables": {
+    "tasks": {
+      "name": "tasks",
+      "columns": {
+        "id": {
+          "autoincrement": false,
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "url": {
+          "autoincrement": false,
+          "name": "url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "title": {
+          "autoincrement": false,
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "autoincrement": false,
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "current_stage": {
+          "autoincrement": false,
+          "name": "current_stage",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "session_path": {
+          "autoincrement": false,
+          "name": "session_path",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "final_video_path": {
+          "autoincrement": false,
+          "name": "final_video_path",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "error_message": {
+          "autoincrement": false,
+          "name": "error_message",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "started_at": {
+          "autoincrement": false,
+          "name": "started_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "completed_at": {
+          "autoincrement": false,
+          "name": "completed_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "task_stages": {
+      "name": "task_stages",
+      "columns": {
+        "task_id": {
+          "autoincrement": false,
+          "name": "task_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "autoincrement": false,
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "label": {
+          "autoincrement": false,
+          "name": "label",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "autoincrement": false,
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "started_at": {
+          "autoincrement": false,
+          "name": "started_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "completed_at": {
+          "autoincrement": false,
+          "name": "completed_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_message": {
+          "autoincrement": false,
+          "name": "last_message",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "error_message": {
+          "autoincrement": false,
+          "name": "error_message",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "progress": {
+          "autoincrement": false,
+          "name": "progress",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {
+        "task_stages_task_id_name_pk": {
+          "columns": [
+            "task_id",
+            "name"
+          ],
+          "name": "task_stages_task_id_name_pk"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "task_stages_task_id_tasks_id_fk": {
+          "name": "task_stages_task_id_tasks_id_fk",
+          "tableFrom": "task_stages",
+          "tableTo": "tasks",
+          "columnsFrom": [
+            "task_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "settings": {
+      "name": "settings",
+      "columns": {
+        "key": {
+          "autoincrement": false,
+          "name": "key",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "value": {
+          "autoincrement": false,
+          "name": "value",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
